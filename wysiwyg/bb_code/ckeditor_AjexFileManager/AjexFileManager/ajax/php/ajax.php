@@ -42,7 +42,9 @@ if (DEV) {
 }
 
 //if (!isset($_SESSION['admin'])) {exit;}			// Do not forget to add your user authorization
-
+if (!isset($_COOKIE['zz_auth'])){
+  exit();
+}
 
 define('DIR_SEP', '/');
 mb_internal_encoding('utf-8');
